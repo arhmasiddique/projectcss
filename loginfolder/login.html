@@ -1,0 +1,304 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+<link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../forms.css">
+        
+</head>
+<body>
+        <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <div class="logo">
+                <img width="80px" src="data:image/png;base64,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" alt="">
+          </div> 
+        
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">Find Talent </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../finftalent.html">Find Work </a>
+              </li> <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Why Upwork </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Enterprise </a>
+              </li>
+            
+            </ul>
+            <div class="search">
+                <form class="d-flex" role="search">
+                  <input class="form-control " type="search" placeholder="Search" aria-label="Search" 
+                  >
+                </form>
+              </div>
+             
+          <a href="../loginfolder/login.html">    <p class="a">Log in </p></a> 
+             <a href="../form folder/form.html"> <button class="b">Sign Up </button> </a>
+      
+    
+          </div>
+        </div>
+      </nav>
+    
+    <div class="abc">
+      <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid ">
+        
+          
+            <div class="navbar-nav">
+              <a  id="aa"  class="nav-link active" aria-current="page" href="../finftalent/finftalent.html">Developement & IT</a>
+              <a  id="bb" class="nav-link active" aria-current="page" href="../ai folder/ai.html">AI Services</a>
+                 <a  id="cc" class="nav-link active" aria-current="page" href="../design folder/design.html">Design & Creative</a>
+                 <a  id="dd" class="nav-link active" aria-current="page" href="#">Sales & Marketing</a>
+                 <a  id="ee" class="nav-link active" aria-current="page" href="#">Admin & Customer support</a>
+                 <a  id="ff"  class="nav-link active" aria-current="page" href="#">More</a>
+               
+             
+            </div>
+        
+        </div>
+      </nav>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <div  class=" container jmm ">
+    <form>
+        <div class="mb-3 ">
+          <label for="exampleInputEmail1" class="form-label"><h4>Email address</h4></label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text"><h6>We'll never share your email with anyone else.</h6></div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label"><h4>Password</h4></label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3 form-check">
+          <input width="" type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button class="buttonnn ">SUBMIT </button>
+      </form>
+
+    </div>
+
+    <div class="my container col-md-12 ">
+      <p class="trust">Trusted by</p>
+      <div class="imge">
+      <img width="120" src="https://res.cloudinary.com/upwork-cloud-acquisition-prod/image/upload/c_fit/general/logobar/colored/microsoft.svg" alt="">
+      &nbsp;  &nbsp;  &nbsp; <img width="100px" src="https://res.cloudinary.com/upwork-cloud-acquisition-prod/image/upload/c_fit/general/logobar/colored/airbnb.svg" alt="">
+      &nbsp; &nbsp;  &nbsp;  <img width="80px" src="https://res.cloudinary.com/upwork-cloud-acquisition-prod/image/upload/c_fit/general/logobar/colored/bissell.svg" alt="">
+      </div>
+      </div>
+
+    
+
+<!-- Footer -->
+<footer class="bg-dark text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+
+      <!-- Github -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Form -->
+    <section class="">
+      <form action="">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>Sign up for our newsletter</strong>
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-5 col-12">
+            <!-- Email input -->
+            <div class="form-outline form-white mb-4">
+              <input type="email" id="form5Example21" class="form-control" />
+              <label class="form-label" for="form5Example21">Email address</label>
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-auto">
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-outline-light mb-4">
+              Subscribe
+            </button>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </form>
+    </section>
+    <!-- Section: Form -->
+
+    <!-- Section: Text -->
+    <section class="mb-4">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+        repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+        eum harum corrupti dicta, aliquam sequi voluptate quas.
+      </p>
+    </section>
+    <!-- Section: Text -->
+
+    <!-- Section: Links -->
+    <section class="">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Link 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 2</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 3</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Link 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 2</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 3</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Link 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 2</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 3</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Link 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 2</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 3</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright:
+    <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
